@@ -12,7 +12,9 @@ try:
             )
     print("Open done")
 
-    ser.write(b'1234567890')
+    data_to_send = bytearray([1,1,1,1,1,1,1,1,1,1])
+    print(len(data_to_send))
+    ser.write(data_to_send)
     print("Send done")
     
     ser.close()
